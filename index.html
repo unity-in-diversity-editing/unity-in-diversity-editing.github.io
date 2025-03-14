@@ -36,6 +36,108 @@
   <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
+  
+  <!-- 添加自定义样式 -->
+  <style>
+    /* 全局字体优化 */
+    body {
+      font-family: 'Google Sans', 'Noto Sans', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    
+    /* 标题样式优化 */
+    .title {
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.2rem;
+    }
+    
+    .title.is-1 {
+      font-size: 2.5rem;
+      line-height: 1.3;
+    }
+    
+    /* 作者部分样式 */
+    .publication-authors {
+      margin: 1.5rem 0;
+      line-height: 1.8;
+    }
+    
+    .author-block {
+      margin: 0 0.2rem;
+    }
+    
+    /* 按钮样式优化 */
+    .button.is-dark {
+      transition: all 0.3s ease;
+      margin: 0.3rem;
+    }
+    
+    .button.is-dark:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    /* 章节样式 - 减少间距 */
+    section {
+      padding: 2rem 1.5rem; /* 减小上下padding，从3rem减至1.8rem */
+    }
+    
+    section.hero.is-light {
+      background-color: #f9f9f9;
+    }
+    
+    /* section之间的间距 */
+    section + section {
+      margin-top: -5rem; /* 增加负margin进一步减少section间距 */
+    }
+    
+    /* 内容样式 */
+    .content {
+      font-size: 1.05rem;
+    }
+    
+    .content p {
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+      text-align: justify;
+    }
+    
+    /* 轮播图样式优化 */
+    .carousel .item {
+      padding: 0.8rem;
+    }
+    
+    .carousel img {
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      max-width: 100%; /* 缩小轮播图尺寸 */
+      margin: 0 auto;
+      display: block;
+    }
+    
+    .result-container {
+      max-width: 850px; /* 限制结果容器的宽度 */
+      margin: 0 auto;
+    }
+    
+    .edit-description {
+      font-size: 0.9rem; /* 缩小描述文字 */
+      margin-top: 0.7rem;
+      text-align: center;
+      color: #555;
+    }
+    
+    /* 方法部分样式 */
+    section.hero img {
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      margin: 1rem auto 2rem;
+      display: block;
+      max-width: 90%;
+    }
+  </style>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -52,28 +154,29 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">Unity in Diversity: Video Editing via Gradient-Latent Purification</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                Junyu Gao<sup>1</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="https://yangkunlin.cn/" target="_blank">Kunlin Yang<sup>2</sup></a>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    Xuan Yao<sup>1</sup>,
+                  </span>
+                    <span class="author-block">
+                    Yufan Hu<sup>2</sup>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+                      <span class="author-block"><sup>1</sup>Institute of automation, Chinese academy of science,  <sup>2</sup>University of Science and Technology Beijing<br>CVPR2025</span>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://openreview.net/pdf?id=fpJWmHUH6Z" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -83,15 +186,15 @@
                     </span>
 
                     <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
+<!--                    <span class="link-block">-->
+<!--                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"-->
+<!--                      class="external-link button is-normal is-rounded is-dark">-->
+<!--                      <span class="icon">-->
+<!--                        <i class="fas fa-file-pdf"></i>-->
+<!--                      </span>-->
+<!--                      <span>Supplementary</span>-->
+<!--                    </a>-->
+<!--                  </span>-->
 
                   <!-- Github link -->
                   <span class="link-block">
@@ -119,26 +222,27 @@
         </div>
       </div>
     </div>
+      </div>
   </div>
 </section>
 
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
+<!--&lt;!&ndash; Teaser video&ndash;&gt;-->
+<!--<section class="hero teaser">-->
+<!--  <div class="container is-max-desktop">-->
+<!--    <div class="hero-body">-->
+<!--      <video poster="" id="tree" autoplay controls muted loop height="100%">-->
+<!--        &lt;!&ndash; Your video here &ndash;&gt;-->
+<!--        <source src="static/videos/banner_video.mp4"-->
+<!--        type="video/mp4">-->
+<!--      </video>-->
+<!--      <h2 class="subtitle has-text-centered">-->
+<!--        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. -->
+<!--      </h2>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+<!--&lt;!&ndash; End teaser video &ndash;&gt;-->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -148,7 +252,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+              Recently, text-driven video editing methods that optimize target latent representations have garnered significant attention and demonstrated promising results. However, these methods rely on self-supervised objectives to compute the gradients needed for updating latent representations, which inevitably introduces gradient noise, compromising content generation quality. Additionally, it is challenging to determine the optimal stopping point for the editing process, making it difficult to achieve an optimal solution for the latent representation. To address these issues, we propose a unified gradient-latent purification framework that collects gradient and latent information across different stages to identify effective and concordant update directions. We design a local coordinate system construction method based on feature decomposition, enabling short-term gradients and final-stage latents to be reprojected onto new axes. Then, we employ tailored coefficient regularization terms to effectively aggregate the decomposed information. Additionally, a temporal smoothing axis extension strategy is developed to enhance the temporal coherence of the generated content. Extensive experiments demonstrate that our proposed method outperforms state-of-the-art methods across various editing tasks, delivering superior editing performance.
           </p>
         </div>
       </div>
@@ -157,150 +261,283 @@
 </section>
 <!-- End paper abstract -->
 
+<!--Method-->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Method</h2>
+      <img src="pipeline.jpg" alt="Pipeline Image" />
+      <div class="columns is-centered has-text-centered">
+          <div class="column">
+              <div class="content has-text-justified" style="max-width: 90%; margin: 0 auto;">
+                  <p style="font-size: 0.95rem; font-style: italic;">
+                      Pipeline of our proposed GLP approach for video editing. Given a source video and corresponding source/target prompts, we employ a latent-optimization-based framework, utilizing DDS loss to compute the gradient of the target latent for progressive optimization. During the optimization process, in order to mitigate gradient noise, we periodically invoke the gradient purification module. This module decomposes the recent gradients and constructs a local coordinate system to facilitate the aggregation of consistent information. Additionally, we design a temporal smoothing strategy to ensure coherence across coordinate systems between adjacent frames. Finally, to achieve a stable latent representation, we apply a similar purification process to the latent representations in the final stages of the optimization.
+                  </p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
 
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
+      <h2 class="title is-3 has-text-centered">Qualitative Results</h2>
       <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <!-- 使用实际的GIF文件 -->
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/bear tiger lion leopard.gif" alt="Bear tiger lion leopard transformation"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/bus gpu.gif" alt="Bus to GPU transformation"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/cat tiger leopard grass.gif" alt="Cat to tiger/leopard in grass"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/cat tiger leopard grass1.gif" alt="Cat to tiger/leopard in grass variation 1"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/cat tiger leopard grass2.gif" alt="Cat to tiger/leopard in grass variation 2"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/cat tiger leopard grass3.gif" alt="Cat to tiger/leopard in grass variation 3"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/dog competition.gif" alt="Dog competition"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/drift turn.gif" alt="Car drift turn"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/drift turn1.gif" alt="Car drift turn variation"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/drift turn2.gif" alt="Car drift turn second variation"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/duck rubber.gif" alt="Duck to rubber duck transformation"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/fox wolf snow.gif" alt="Fox to wolf in snow"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/fox wolf snow1.gif" alt="Fox to wolf in snow variation"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/gold fish.gif" alt="Goldfish transformation"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/gold fish1.gif" alt="Goldfish transformation variation"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/gray dog.gif" alt="Gray dog transformation"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/gray dog1.gif" alt="Gray dog transformation variation"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/ice hockey.gif" alt="Ice hockey scene"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/ice hockey1.gif" alt="Ice hockey scene variation"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/judo.gif" alt="Judo match"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/judo1.gif" alt="Judo match variation 1"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/judo2.gif" alt="Judo match variation 2"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/juggling selfie.gif" alt="Juggling selfie"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/lindy hop.gif" alt="Lindy hop dance"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/lindy hop1.gif" alt="Lindy hop dance variation"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/man skate.gif" alt="Man skating"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/mbike trick.gif" alt="Motorbike trick"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/mbike trick1.gif" alt="Motorbike trick variation"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/rabbit strawberry.gif" alt="Rabbit with strawberry"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/squirrel carrot.gif" alt="Squirrel with carrot"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/squirrel carrot1.gif" alt="Squirrel with carrot variation"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/stunt.gif" alt="Stunt performance"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/stunt1.gif" alt="Stunt performance variation"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/surf.gif" alt="Surfing scene"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/swan swarov.gif" alt="Swan transformation"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/swan swarov1.gif" alt="Swan transformation variation"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/swimmer.gif" alt="Swimming scene"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/teaser car turn.gif" alt="Car turning sequence"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/teaser car turn1.gif" alt="Car turning sequence variation"/>
+          </div>
+        </div>
+        <div class="item">
+          <div class="result-container">
+            <img class="result-image" src="gif/varanus cage.gif" alt="Varanus in cage"/>
           </div>
         </div>
       </div>
+      
     </div>
   </div>
 </section>
-<!-- End youtube video -->
 
-
-<!-- Video carousel -->
-<section class="hero is-small">
+<!-- Compare with SOTA methods -->
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
+      <h3 class="title is-4 has-text-centered">Compare with SOTA methods</h3>
+      
+      <div class="columns is-centered">
+        <div class="column is-full"> 
+          <div class="compare-container">
+            <p class="prompt-text has-text-centered">
+              gray dog → robotic dog
+            </p>
+            <img class="result-image compare-image" src="gif_com/gray.gif" alt="Gray dog to robotic dog comparison" style="max-width: 650px; width: 100%;"/>
+          </div>
         </div>
       </div>
+      
+      <div class="columns is-centered" style="margin-top: 2rem;">
+        <div class="column is-full">
+          <div class="compare-container">
+            <p class="prompt-text has-text-centered">
+              squirrel → robot squirrel
+            </p>
+            <img class="result-image compare-image" src="gif_com/mouse.gif" alt="Squirrel to robot squirrel comparison" style="max-width: 650px; width: 100%;"/>
+          </div>
+        </div>
+      </div>
+      
     </div>
   </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
+</section> -->
 
 <!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
-    </div>
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #eaecef; background: #f6f8fa; padding: 1.5rem; margin-top: 0.5rem;"><code style="font-size: 1.05rem; background: transparent;">@inproceedings{gao2025unity,
+  title={Unity in Diversity: Video Editing via Gradient-Latent Purification},
+  author={Gao, Junyu and Yang, Kunlin and Yao, Xuan and Hu, Yufan},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2025},
+  organization={IEEE}
+}</code></pre>
+  </div>
 </section>
 <!--End BibTex citation -->
 
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
 
 <!-- Statcounter tracking code -->
   

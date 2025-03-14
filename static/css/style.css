@@ -1,0 +1,194 @@
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #3498db;
+    --background-light: #f8f9fa;
+  }
+  
+  .publication-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  
+  .author-block {
+    font-size: 1.1rem;
+    color: #34495e;
+    transition: all 0.3s ease;
+  }
+  
+  .author-block a:hover {
+    color: var(--accent-color);
+  }
+  
+  .publication-links {
+    margin-top: 2rem;
+  }
+  
+  .button.is-dark {
+    background: var(--primary-color);
+    transition: all 0.3s ease;
+  }
+  
+  .button.is-dark:hover {
+    background: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .hero.is-light {
+    background: var(--background-light);
+  }
+  
+  .section {
+    padding: 3rem 1.5rem; /* 从5rem减至3rem */
+  }
+  
+  .carousel {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .carousel img {
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .carousel img:hover {
+    transform: scale(1.02);
+  }
+  
+  .title.is-3 {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+  }
+  .title.is-4 {
+    color: var(--primary-color);
+    font-weight: 200;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+  }
+  
+  .title.is-3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--accent-color);
+  }
+  
+  pre code {
+    background: #f6f8fa;
+    border-radius: 12px; /* 增加圆角半径 */
+    padding: 1.5rem !important;
+    font-size: 1.05rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* 添加轻微阴影效果 */
+    display: block;
+    border: 1px solid #eaecef; /* 添加淡色边框 */
+    margin-top: 0.5rem;
+  }
+
+/* 扩散模型视频编辑结果展示样式 */
+.prompt-text {
+  font-family: 'Pacifico', 'Dancing Script', 'Brush Script MT', cursive;
+  font-size: 1.7rem;
+  font-weight: 600;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.result-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.8rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.result-image {
+  border-radius: 8px;
+  max-width: 100%;
+  transition: all 0.3s ease;
+}
+
+.result-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.edit-description {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #555;
+  font-weight: 500;
+}
+
+/* 隐藏轮播图内置导航按钮 */
+.carousel .carousel-nav-left,
+.carousel .carousel-nav-right {
+  display: none !important;
+}
+
+/* 保留自定义导航按钮 */
+.carousel-navigation .carousel-nav-left,
+.carousel-navigation .carousel-nav-right {
+  display: flex !important;
+}
+
+/* 比较部分的样式增强 */
+.compare-container {
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12), 0 6px 10px rgba(0,0,0,0.08);
+  transform: perspective(1000px) rotateX(2deg);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 550px; /* 进一步减小容器最大宽度 */
+  margin: 0 auto;
+}
+
+.compare-image {
+  width: 90%; 
+  max-width: none !important; /* 覆盖其他可能的限制 */
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: all 0.4s ease;
+  transform: translateZ(20px);
+  object-fit: contain;
+}
+
+/* 修改prompt文本样式使其更醒目居中 */
+.compare-container .prompt-text {
+  font-size: 1.8rem;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
