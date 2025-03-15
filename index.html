@@ -137,6 +137,28 @@
       display: block;
       max-width: 90%;
     }
+    
+    /* 比较轮播图样式 - 使按钮更小且更靠内 */
+    .comparison-carousel .slider-navigation-previous,
+    .comparison-carousel .slider-navigation-next {
+      width: 30px;  /* 减小按钮宽度，原来默认是40px */
+      height: 30px; /* 减小按钮高度，原来默认是40px */
+      margin: 0 40px; /* 增加左右边距，使按钮更靠内 */
+      background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+      border-radius: 50%; /* 保持圆形按钮 */
+    }
+    
+    .comparison-carousel .icon {
+      font-size: 0.8rem; /* 减小按钮内图标大小 */
+    }
+    
+    .comparison-carousel .slider-navigation-previous {
+      left: 10%; /* 向内移动左按钮 */
+    }
+    
+    .comparison-carousel .slider-navigation-next {
+      right: 10%; /* 向内移动右按钮 */
+    }
   </style>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -492,36 +514,236 @@
 </section>
 
 <!-- Compare with SOTA methods -->
-<!-- <section class="hero is-small">
+<section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <h3 class="title is-4 has-text-centered">Compare with SOTA methods</h3>
       
+      <!-- 第一组对比轮播图 -->
       <div class="columns is-centered">
-        <div class="column is-full"> 
-          <div class="compare-container">
-            <p class="prompt-text has-text-centered">
-              gray dog → robotic dog
-            </p>
-            <img class="result-image compare-image" src="gif_com/gray.gif" alt="Gray dog to robotic dog comparison" style="max-width: 650px; width: 100%;"/>
+        <div class="column is-full">
+          <h4 class="subtitle is-6 has-text-centered" style="margin-bottom: 0rem;"><em>target prompt:</em> "a red tiger walking on the rock against a wall"</h4>
+          <div id="comparison-carousel-1" class="carousel results-carousel comparison-carousel">
+            <div class="item">
+              <div class="result-container">
+                <img class="result-image" src="gif_com/1/1.gif" alt="Comparison 1-1"/>
+              </div>
+            </div>
+            <div class="item">
+              <div class="result-container">
+                <img class="result-image" src="gif_com/1/2.gif" alt="Comparison 1-2"/>
+              </div>
+            </div>
+            <div class="item">
+              <div class="result-container">
+                <img class="result-image" src="gif_com/1/3.gif" alt="Comparison 1-3"/>
+              </div>
+            </div>
+            <div class="item">
+              <div class="result-container">
+                <img class="result-image" src="gif_com/1/4.gif" alt="Comparison 1-4"/>
+              </div>
+            </div>
+            <div class="item">
+              <div class="result-container">
+                <img class="result-image" src="gif_com/1/5.gif" alt="Comparison 1-5"/>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       
-      <div class="columns is-centered" style="margin-top: 2rem;">
+      <!-- 第二组对比轮播图 -->
+      <div class="columns is-centered" style="margin-top: 0rem;">
         <div class="column is-full">
-          <div class="compare-container">
-            <p class="prompt-text has-text-centered">
-              squirrel → robot squirrel
-            </p>
-            <img class="result-image compare-image" src="gif_com/mouse.gif" alt="Squirrel to robot squirrel comparison" style="max-width: 650px; width: 100%;"/>
+          <h4 class="subtitle is-6 has-text-centered" style="margin-bottom: 0rem;"><em>target prompt:</em> "A red tiger walking on the floor next to a wall"</h4>
+          <div id="comparison-carousel-2" class="carousel results-carousel comparison-carousel">
+            <div class="item">
+              <div class="result-container">
+                <img class="result-image" src="gif_com/2/1.gif" alt="Comparison 2-1"/>
+              </div>
+            </div>
+            <div class="item">
+              <div class="result-container">
+                <img class="result-image" src="gif_com/2/2.gif" alt="Comparison 2-2"/>
+              </div>
+            </div>
+            <div class="item">
+              <div class="result-container">
+                <img class="result-image" src="gif_com/2/3.gif" alt="Comparison 2-3"/>
+              </div>
+            </div>
+            <div class="item">
+              <div class="result-container">
+                <img class="result-image" src="gif_com/2/4.gif" alt="Comparison 2-4"/>
+              </div>
+            </div>
+            <div class="item">
+              <div class="result-container">
+                <img class="result-image" src="gif_com/2/5.gif" alt="Comparison 2-5"/>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      
+      <!-- 第三组对比轮播图 -->
+      <div class="columns is-centered" style="margin-top: 0rem;">
+        <div class="column is-full">
+          <h4 class="subtitle is-6 has-text-centered" style="margin-bottom: 0rem;"><em>target prompt:</em> "a sleepy yellow rubber duck"</h4>
+          <div id="comparison-carousel-3" class="carousel results-carousel comparison-carousel">
+            <div class="item">
+              <div class="result-container">
+                <img class="result-image" src="gif_com/3/1.gif" alt="Comparison 3-1"/>
+              </div>
+            </div>
+            <div class="item">
+              <div class="result-container">
+                <img class="result-image" src="gif_com/3/2.gif" alt="Comparison 3-2"/>
+              </div>
+            </div>
+            <div class="item">
+              <div class="result-container">
+                <img class="result-image" src="gif_com/3/3.gif" alt="Comparison 3-3"/>
+              </div>
+            </div>
+            <div class="item">
+              <div class="result-container">
+                <img class="result-image" src="gif_com/3/4.gif" alt="Comparison 3-4"/>
+              </div>
+            </div>
+            <div class="item">
+              <div class="result-container">
+                <img class="result-image" src="gif_com/3/5.gif" alt="Comparison 3-5"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 第四组对比轮播图 -->
+      <div class="columns is-centered" style="margin-top: 0rem;">
+        <div class="column is-full">
+          <h4 class="subtitle is-6 has-text-centered" style="margin-bottom: 0rem;"><em>target prompt:</em> "a white fox sitting in the snow"</h4>
+          <div id="comparison-carousel-4" class="carousel results-carousel comparison-carousel">
+            <div class="item">
+              <div class="result-container">
+                <img class="result-image" src="gif_com/4/1.gif" alt="Comparison 4-1"/>
+              </div>
+            </div>
+            <div class="item">
+              <div class="result-container">
+                <img class="result-image" src="gif_com/4/2.gif" alt="Comparison 4-2"/>
+              </div>
+            </div>
+            <div class="item">
+              <div class="result-container">
+                <img class="result-image" src="gif_com/4/3.gif" alt="Comparison 4-3"/>
+              </div>
+            </div>
+            <div class="item">
+              <div class="result-container">
+                <img class="result-image" src="gif_com/4/4.gif" alt="Comparison 4-4"/>
+              </div>
+            </div>
+            <div class="item">
+              <div class="result-container">
+                <img class="result-image" src="gif_com/4/5.gif" alt="Comparison 4-5"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 第五组对比轮播图 -->
+      <div class="columns is-centered" style="margin-top: 0rem;">
+        <div class="column is-full">
+          <h4 class="subtitle is-6 has-text-centered" style="margin-bottom: 0rem;"><em>target prompt:</em> "Several sharks swim in a tank."</h4>
+          <div id="comparison-carousel-5" class="carousel results-carousel comparison-carousel">
+            <div class="item">
+              <div class="result-container">
+                <img class="result-image" src="gif_com/5/1.gif" alt="Comparison 5-1"/>
+              </div>
+            </div>
+            <div class="item">
+              <div class="result-container">
+                <img class="result-image" src="gif_com/5/2.gif" alt="Comparison 5-2"/>
+              </div>
+            </div>
+            <div class="item">
+              <div class="result-container">
+                <img class="result-image" src="gif_com/5/3.gif" alt="Comparison 5-3"/>
+              </div>
+            </div>
+            <div class="item">
+              <div class="result-container">
+                <img class="result-image" src="gif_com/5/4.gif" alt="Comparison 5-4"/>
+              </div>
+            </div>
+            <div class="item">
+              <div class="result-container">
+                <img class="result-image" src="gif_com/5/5.gif" alt="Comparison 5-5"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 第七组对比轮播图 -->
+      <div class="columns is-centered" style="margin-top: 0rem;">
+        <div class="column is-full">
+          <h4 class="subtitle is-6 has-text-centered" style="margin-bottom: 0rem;"><em>target prompt:</em> "a Swarovski crystal swan with a red beak swimming in a river near a wall and bushes"</h4>
+          <div id="comparison-carousel-7" class="carousel results-carousel comparison-carousel">
+            <div class="item">
+              <div class="result-container">
+                <img class="result-image" src="gif_com/7/1.gif" alt="Comparison 7-1"/>
+              </div>
+            </div>
+            <div class="item">
+              <div class="result-container">
+                <img class="result-image" src="gif_com/7/2.gif" alt="Comparison 7-2"/>
+              </div>
+            </div>
+            <div class="item">
+              <div class="result-container">
+                <img class="result-image" src="gif_com/7/3.gif" alt="Comparison 7-3"/>
+              </div>
+            </div>
+            <div class="item">
+              <div class="result-container">
+                <img class="result-image" src="gif_com/7/4.gif" alt="Comparison 7-4"/>
+              </div>
+            </div>
+            <div class="item">
+              <div class="result-container">
+                <img class="result-image" src="gif_com/7/5.gif" alt="Comparison 7-5"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <script>
+        // 初始化所有比较轮播图
+        document.addEventListener('DOMContentLoaded', function() {
+          for (let i = 1; i <= 7; i++) {
+            if (i === 6) continue; // 跳过第6个轮播图，因为它已被注释掉
+            
+            bulmaCarousel.attach('#comparison-carousel-' + i, {
+              slidesToScroll: 1,
+              slidesToShow: 1,
+              infinite: true,
+              autoplay: false,
+              pagination: false, // 隐藏底部分页点
+              navigationStyle: 'is-overlay' // 使用覆盖式导航样式
+            });
+          }
+        });
+      </script>
       
     </div>
   </div>
-</section> -->
+</section>
 
 <!--BibTex citation -->
 <section class="section" id="BibTeX">
